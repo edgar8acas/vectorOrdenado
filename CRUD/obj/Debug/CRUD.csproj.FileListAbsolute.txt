@@ -1,0 +1,10 @@
+c:\users\zaida\source\repos\CRUD\CRUD\bin\Debug\CRUD.exe.config
+c:\users\zaida\source\repos\CRUD\CRUD\bin\Debug\CRUD.exe
+c:\users\zaida\source\repos\CRUD\CRUD\bin\Debug\CRUD.pdb
+c:\users\zaida\source\repos\CRUD\CRUD\obj\Debug\CRUD.csprojResolveAssemblyReference.cache
+c:\users\zaida\source\repos\CRUD\CRUD\obj\Debug\CRUD.Properties.Resources.resources
+c:\users\zaida\source\repos\CRUD\CRUD\obj\Debug\CRUD.csproj.GenerateResource.Cache
+c:\users\zaida\source\repos\CRUD\CRUD\obj\Debug\CRUD.csproj.CoreCompileInputs.cache
+c:\users\zaida\source\repos\CRUD\CRUD\obj\Debug\CRUD.exe
+c:\users\zaida\source\repos\CRUD\CRUD\obj\Debug\CRUD.pdb
+C:\Users\Zaida\source\repos\CRUD\CRUD\obj\Debug\CRUD.Form1.resources
