@@ -25,7 +25,7 @@ namespace CRUD
 
         private void btnBuscar2_Click(object sender, EventArgs e)
         {
-            txtResultado.Text = _crud.Buscar(Convert.ToInt32(txtCodigo2.Text)).ToString();
+            txtResultado.Text = _crud.Buscar(Convert.ToInt32(txtCodigo2.Text), out int posicion).ToString();
         }
 
         private void btnEliminar2_Click(object sender, EventArgs e)
@@ -35,14 +35,6 @@ namespace CRUD
 
         private void btnInsertar2_Click(object sender, EventArgs e)
         {
-            _crud.Insertar(new Producto{
-                                Codigo = Convert.ToInt32(txtCodigo2.Text),
-                                Nombre = txtNombre2.Text,
-                                Descripcion = txtDescripcion2.Text,
-                                Cantidad = Convert.ToInt32(txtCantidad2.Text),
-                                Costo = Convert.ToDouble(txtCosto2.Text)
-            }, 
-            Convert.ToInt32(txtPosicion2.Text));
         }
 
         private void btnListar2_Click(object sender, EventArgs e)

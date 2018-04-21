@@ -41,10 +41,7 @@
             this.btnAgregar2 = new System.Windows.Forms.Button();
             this.btnBuscar2 = new System.Windows.Forms.Button();
             this.btnEliminar2 = new System.Windows.Forms.Button();
-            this.btnInsertar2 = new System.Windows.Forms.Button();
             this.btnListar2 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtPosicion2 = new System.Windows.Forms.TextBox();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -158,41 +155,15 @@
             this.btnEliminar2.UseVisualStyleBackColor = true;
             this.btnEliminar2.Click += new System.EventHandler(this.btnEliminar2_Click);
             // 
-            // btnInsertar2
-            // 
-            this.btnInsertar2.Location = new System.Drawing.Point(323, 133);
-            this.btnInsertar2.Name = "btnInsertar2";
-            this.btnInsertar2.Size = new System.Drawing.Size(75, 23);
-            this.btnInsertar2.TabIndex = 13;
-            this.btnInsertar2.Text = "Insertar";
-            this.btnInsertar2.UseVisualStyleBackColor = true;
-            this.btnInsertar2.Click += new System.EventHandler(this.btnInsertar2_Click);
-            // 
             // btnListar2
             // 
-            this.btnListar2.Location = new System.Drawing.Point(323, 162);
+            this.btnListar2.Location = new System.Drawing.Point(323, 134);
             this.btnListar2.Name = "btnListar2";
             this.btnListar2.Size = new System.Drawing.Size(75, 23);
             this.btnListar2.TabIndex = 14;
             this.btnListar2.Text = "Listar";
             this.btnListar2.UseVisualStyleBackColor = true;
             this.btnListar2.Click += new System.EventHandler(this.btnListar2_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(419, 114);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 13);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Posicion";
-            // 
-            // txtPosicion2
-            // 
-            this.txtPosicion2.Location = new System.Drawing.Point(422, 131);
-            this.txtPosicion2.Name = "txtPosicion2";
-            this.txtPosicion2.Size = new System.Drawing.Size(100, 20);
-            this.txtPosicion2.TabIndex = 15;
             // 
             // txtResultado
             // 
@@ -206,10 +177,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(548, 465);
             this.Controls.Add(this.txtResultado);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtPosicion2);
             this.Controls.Add(this.btnListar2);
-            this.Controls.Add(this.btnInsertar2);
             this.Controls.Add(this.btnEliminar2);
             this.Controls.Add(this.btnBuscar2);
             this.Controls.Add(this.btnAgregar2);
@@ -256,10 +224,7 @@
         private System.Windows.Forms.Button btnAgregar2;
         private System.Windows.Forms.Button btnBuscar2;
         private System.Windows.Forms.Button btnEliminar2;
-        private System.Windows.Forms.Button btnInsertar2;
         private System.Windows.Forms.Button btnListar2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtPosicion2;
         private System.Windows.Forms.TextBox txtResultado;
     }
 }

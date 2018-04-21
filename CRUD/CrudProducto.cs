@@ -48,18 +48,54 @@ namespace CRUD
             }
         }
 
-        public Producto Buscar(int codigo)
+        public Producto Buscar(int codigo, out int posicion)
         {
-            for (int i = 0; i < 15; i++)
+            bool encontrado = false;
+            int min = 0;
+            int max = _cantidad -1;
+            int mitad = max / 2;
+
+            //Comprueba en un inicio por el valor inicial y el valor final del vector,
+            if (codigo == _productos[min].Codigo)
             {
-                if(_productos[i].Codigo == codigo)
+                posicion = min;
+                return _productos[min];
+            }
+            else if (codigo == _productos[max].Codigo)
+            {
+                posicion = max;
+                return _productos[max];
+            }
+            //en caso de no coincidir, comienza con la búsqueda en las demás posiciones.
+            else
+            {
+                while (!encontrado)
                 {
-                    return _productos[i];
+                    //Si el codigo es mayor a el valor en la mitad:
+                    if (codigo > _productos[mitad].Codigo)
+                    {
+                        min = mitad;
+                        mitad = (max + min) / 2;
+                        //max queda igual.
+                    }
+                    else if (codigo < _productos[mitad].Codigo)
+                    {
+                        max = mitad;
+                        mitad = (max + min) / 2;
+                        //min queda igual.
+                    }
+                    else
+                    {
+                        posicion = mitad;
+                        return _productos[mitad];
+                    }
                 }
             }
+            posicion = -1;
             return null;
         }
 
+        //No existe en el formulario, pero es necesario para Agregar(Producto producto)
         public void Insertar(Producto producto, int posicion)
         {
             Recorrer(posicion, true);
@@ -71,13 +107,13 @@ namespace CRUD
         {
             if (direccion) //Derecha
             {
-                for (int i = 14; i > posicion; i--)
+                for (int i = _cantidad-1; i > posicion; i--)
                 {
                     _productos[i] = _productos[i - 1];
                 }
             } else 
             {
-                for (int i = posicion; i < 15 ; i++)
+                for (int i = posicion; i < _cantidad-1 ; i++)
                 {
                     _productos[i] = _productos[i + 1];
                 }
@@ -87,23 +123,11 @@ namespace CRUD
         public void Eliminar(int codigo)
         {
             //La posición en el vector del valor eliminado
-            int posicion = 0;
-
-            //Ciclo para encontrar el elemento a eliminar
-            for (int i = 0; i < 15; i++)
-            {
-                if(_productos[i].Codigo == codigo)
-                {
-                    _productos[i] = null;
-
-                    //Se guarda la posición
-                    posicion = i; 
-                    break;
-                }
-            }
-
-            //Recorrer hacia la izquierda.
+            int posicion;
+            Producto p = Buscar(codigo, out posicion);
+            _productos[posicion] = null;
             Recorrer(posicion, false);
+            _cantidad--;
             
         }
 
